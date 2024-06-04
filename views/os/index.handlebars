@@ -1,0 +1,31 @@
+<h1>Lista de OS</h1>
+<a href="/os/create">Criar Nova OS</a>
+<table>
+  <thead>
+    <tr>
+      <th>OS</th>
+      <th>Setor</th>
+      <th>Período</th>
+      <th>Equipamentos</th>
+      <th>Estado</th>
+      <th>Tipo de Equipamento</th>
+      <th>Ações</th>
+    </tr>
+  </thead>
+  <tbody>
+    {{#each osList}}
+    <tr>
+      <td>{{this.OS}}</td>
+      <td>{{this.SETOR}}</td>
+      <td>{{this.PERIODO}}</td>
+      <td>{{this.EQUIPAMENTOS}}</td>
+      <td>{{this.ESTADO}}</td>
+      <td>{{this.TIPO_EQUIP}}</td>
+      <td>
+        <a href="/os/edit/{{this.OS}}">Editar</a>
+        <a href="/os/delete/{{this.OS}}">Deletar</a>
+      </td>
+    </tr>
+    {{/each}}
+  </tbody>
+</table>
